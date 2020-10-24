@@ -128,3 +128,11 @@ test('✂️  substring', (t) => {
   t.deepEqual(substring('👨‍👨‍👧‍👧abc', 1), 'abc')
   t.deepEqual(substring('👨‍👨‍👧‍👧abcd', 2), 'bcd')
 })
+
+test('✂️  Runes should handle ⚐0🌈', (t) => {
+  t.deepEqual(runes('⚐0🌈'), ['⚐', '0', '🌈'])
+})
+
+test('✂️  Runes should handle 🇹🇼', (t) => {
+  t.deepEqual(runes('🇹🇼'), ['🇹🇼'])
+})
